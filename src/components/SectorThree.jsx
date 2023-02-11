@@ -9,13 +9,13 @@ import { Grid } from '@mui/material';
 import DoneIcon from '@mui/icons-material/Done';
 import { List, ListItem, ListItemButton } from '@mui/material';
 import ListItemContent from '@mui/joy/ListItemContent';
-const card = (head, price, adj, about) => (
+const card = (head, price,aboutOne, aboutTwo, aboutThree, aboutFour) => (
     <React.Fragment>
         <CardContent>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                 {head}
             </Typography>
-            <Typography variant="h5" component="div">
+            <Typography variant="h2" component="div">
                 {price}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
@@ -27,15 +27,49 @@ const card = (head, price, adj, about) => (
                             <DoneIcon sx={{
                                 marginRight: 3
                             }} />
-                            <ListItemContent>{about}</ListItemContent>
-
+                            <ListItemContent sx={{
+                                fontFamily: 'Inter'
+                            }}>{aboutOne}</ListItemContent>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                        <ListItemButton color="danger">
+                            <DoneIcon sx={{
+                                marginRight: 3
+                            }} />
+                            <ListItemContent sx={{
+                                fontFamily: 'Inter'
+                            }}>{aboutTwo}</ListItemContent>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                        <ListItemButton color="danger">
+                            <DoneIcon sx={{
+                                marginRight: 3
+                            }} />
+                            <ListItemContent sx={{
+                                fontFamily: 'Inter'
+                            }}>{aboutThree}</ListItemContent>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                        <ListItemButton color="danger">
+                            <DoneIcon sx={{
+                                marginRight: 3
+                            }} />
+                            <ListItemContent sx={{
+                                fontFamily: 'Inter'
+                            }}>{aboutFour}</ListItemContent>
                         </ListItemButton>
                     </ListItem>
                 </List>
             </Box>
         </CardContent>
         <CardActions>
-            <Button size="small">Learn More</Button>
+            <Button variant='contained' sx={{
+                backgroundColor: `#000000`,
+                ":hover": {backgroundColor: `#363636`}
+            }} size="meduim">Get Started</Button>
         </CardActions>
     </React.Fragment>
 );
@@ -47,40 +81,30 @@ export default function SectorThree() {
                 marginTop: 2
             }} container spacing={3}>
                 <Grid sx={{
-                    minWidth: 200,
-                    minHeight: 300
+                    minWidth: 310,
+                    minHeight: 435
                 }} item xs>
                     <Card sx={{
                         borderRadius: 5
-                    }} variant="outlined">{card('dfvf', 'fdfv', 'fdfvdf', 'sfvsvvfwv')}</Card>
+                    }} variant="outlined">{card('Easy', '$0', 'simple web-apps layout', 'simple telegram-bot', 'mobile apps layout', 'plugins')}</Card>
                 </Grid>
                 <Grid sx={{
-                    minWidth: 200,
-                    minHeight: 300
-                }}
-                    item xs>
-                    <Card sx={{
-                        borderRadius: 5,
-                        height: 170,
-                    }} variant="outlined">{card('MOBILE', 'For Mobile apps', 'Mobile apps for our buisnes')}</Card>
-                </Grid>
-                <Grid sx={{
-                    minWidth: 200,
-                    minHeight: 300
+                    minWidth: 310,
+                    minHeight: 435
                 }}
                     item xs>
                     <Card sx={{
                         borderRadius: 5
-                    }} variant="outlined">{card('TELEGRAM', 'For Telegram Oauth and Bots', 'Telegram Bots (helper) for your shop or individual use')}</Card>
+                    }} variant="outlined">{card('Normal', '$25', 'dimanyc web application', 'telegram-bots with features', 'standart mobile apps', 'softwares')}</Card>
                 </Grid>
                 <Grid sx={{
-                    minWidth: 200,
-                    minHeight: 300
+                    minWidth: 310,
+                    minHeight: 435
                 }}
                     item xs>
                     <Card sx={{
                         borderRadius: 5
-                    }} variant="outlined">{card('SOFTWARE', 'For simple plugins and big softs', 'Writing some plug-in systems for your projects')}</Card>
+                    }} variant="outlined">{card('Professional', '$60', 'difficult web apps', 'telegram-bots with difficult features','difficult mobile apps','systems features' )}</Card>
                 </Grid>
             </Grid>
         </Box>
