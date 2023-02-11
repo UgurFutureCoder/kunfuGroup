@@ -92,10 +92,10 @@ const NavBar = () => {
     
     
     return (
-        <AppBar sx={{ margin: 0,backgroundColor: `#000000`,borderRadius: 5}} position='static'>
+        <AppBar sx={{ width: '100%',margin: 0,backgroundColor: `#000000`,borderRadius: 5}} position='static'>
             <Container maxWidth="xl">
                 <Toolbar   disableGutters>
-                    <AdbIcon sx={{display: {xs: 'none', md: 'flex'}}} />
+                    <AdbIcon sx={{display: {xs: 'none', md: 'flex',}}} />
                     <Typography
                     variant='h6'
                     noWrap
@@ -123,7 +123,7 @@ const NavBar = () => {
                         aria-controls='menu-appbar'
                         aria-haspopup="true"
                         color='inherit'
-                        ><MenuIcon /></IconButton>
+                        ><MenuIcon sx={{color: `#FFFFFF`}} /></IconButton>
           </Button>
           <Drawer
             anchor={'left'}
@@ -160,7 +160,10 @@ const NavBar = () => {
               variant="outlined"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: `#d1c4e9`,display: 'block', marginLeft: 5 }}
+                sx={{ my: 2, borderColor: `#FFFFFF`,color: `#FFFFFF`,display: 'block', marginLeft: 5,
+              ":hover": {borderColor: `#f70707`}
+              
+              }}
                 
               >
                 {page}
