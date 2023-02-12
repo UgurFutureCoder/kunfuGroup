@@ -6,7 +6,6 @@ import { Box } from "@mui/system";
 import ImageListItem from '@mui/material/ImageListItem';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import './index.css'
 const SectorFive = () => {
     return (
         <div>
